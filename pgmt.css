@@ -1,0 +1,234 @@
+body{
+    background-color: #000000;
+}
+.plan {
+    /* Estilo do container do plano */
+    border-radius: 20px;
+    box-shadow: 0 30px 30px -25px rgba(5, 22, 117, 0.205);
+    padding: 30px;
+    background-color: #7e767631; /* Cor de fundo do plano */
+    color: #fee4ff; /* Cor do texto dentro do plano */
+    max-width: 500px;
+    position: relative; /* Definir posição relativa */
+    top:100px; /* Ajuste a distância do topo conforme necessário */
+    left: 360px; /* Ajuste a distância da esquerda conforme necessário */
+  }
+  
+  /* Estilo do texto em negrito dentro do plano */
+  .plan strong {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.623); /* Cor do texto em negrito */
+  }
+  
+  /* Estilo do conteúdo interno do plano */
+  .plan .inner {
+    align-items: center;
+    padding: 30px;
+    padding-top: 90px;
+    background-color: #9d52c0; /* Cor de fundo do conteúdo interno */
+
+    border-radius: 12px;
+    position: relative;
+  }
+  
+  /* Estilo do preço do plano */
+  .plan .pricing {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #dadada;
+    border-radius: 99em 0 0 99em;
+    display: flex;
+    align-items: center;
+    padding: 0.625em 0.75em;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000000;
+  }
+  
+  /* Estilo do texto "mês" ao lado do preço */
+  .plan .pricing small {
+    color: #413333;
+    font-size: 0.75em;
+    margin-left: 0.25em;
+  }
+  
+  /* Estilo do título do plano */
+  .plan .title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #ffffff;
+  }
+  
+  /* Estilo das informações adicionais sobre o plano */
+  .plan .info + * {
+    margin-top: 1rem;
+  }
+  
+  /* Estilo da lista de recursos do plano */
+  .plan .features {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilo de cada item da lista de recursos */
+  .plan .features li + * {
+    margin-top: 0.75rem;
+  }
+  
+  /* Estilo do ícone ao lado de cada item da lista de recursos */
+  .plan .features .icon {
+    background-color: #f7137d52;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Estilo do botão de ação do plano */
+  .plan .action {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  
+  /* Estilo do botão de escolha do plano */
+  .plan .button {
+    background-color: #6558d3;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 0.625em 0.75em;
+    text-decoration: none;
+  }
+  
+  /* Estilo do botão ao passar o mouse sobre ele */
+  .plan .button:hover,
+  .plan .button:focus {
+    background-color: #8603dd;
+  }
+  
+#menuToggle
+{
+display: block;
+position: relative;
+top: 30px;
+left: 10px;
+z-index: 1;
+-webkit-user-select: none;
+user-select: none;
+}
+
+#menuToggle a
+{
+text-decoration: none;
+color: #ffffff;
+transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+color: rgb(122, 8, 151);
+}
+
+
+#menuToggle input
+{
+display: block;
+width: 40px;
+height: 32px;
+position: absolute;
+top: -7px;
+left: -5px;
+cursor: pointer;
+opacity: 0; /* hide this */
+z-index: 2; /* and place it over the hamburger */
+-webkit-touch-callout: none;
+}
+#menuToggle span
+{
+display: block;
+width: 33px;
+height: 4px;
+margin-bottom: 5px;
+position: relative;
+background: #fffdfd;
+border-radius: 3px;
+z-index: 1;
+transform-origin: 4px 0px;
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+opacity: 1;
+transform: rotate(45deg) translate(-2px, -1px);
+background: #eceaea;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+opacity: 0;
+transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+position: absolute;
+width: 400px;
+margin: -100px 0 0 -50px;
+padding: 50px;
+padding-top: 125px;
+background: #ededed1e;
+list-style-type: none;
+-webkit-font-smoothing: antialiased;
+/* to stop flickering of text in safari */
+transform-origin: 0% 0%;
+transform: translate(-100%, 0);
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+padding: 10px 0;
+font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul
+{
+transform: none;
+}
+#img1 {
+    width: 170px; /* Tamanho desejado para a imagem */
+    height: auto; /* Altura automática para manter a proporção */
+    position: absolute; /* Posicionamento absoluto */
+    top: -47px; /* Distância do topo */
+    left: 47%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+  }
